@@ -10,7 +10,10 @@ import acm.program.*;
 public class Quadratic extends ConsoleProgram {
 
 	public void run() {
-		// You fill this in
+		println("Enter coefficients for the quadratic equation: ");
+		double a = readDouble("a: ");
+		double b = readDouble("b: ");
+		double c = readDouble("c: ");
 	}
 
 }
