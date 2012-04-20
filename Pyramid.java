@@ -12,7 +12,7 @@ public class Pyramid extends GraphicsProgram {
 	
 	private static final double BRICK_WIDTH = 30;
 	private static final double BRICK_HEIGHT = 12;
-	private static final double BRICKS_IN_BASE =12;
+	//private static final double BRICKS_IN_BASE =12;
 
 	public void run() {
 		double x = (getWidth() - BRICK_WIDTH) / 2;
