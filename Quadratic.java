@@ -14,7 +14,14 @@ public class Quadratic extends ConsoleProgram {
 		double a = readDouble("a: ");
 		double b = readDouble("b: ");
 		double c = readDouble("c: ");
+		double x1 = calculateSolutionOne(a, b, c);
+		//double x2 = calculateSolutionTwo();
+		println("The first solution is: " + x1);
 	}
 
+	private double calculateSolutionOne(double a, double b, double c) {
+		double x = (b * b) - (4 * a * c);
+		return (-b + Math.sqrt(x)) / (2 * a);
+	}
 }
 
