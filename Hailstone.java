@@ -17,16 +17,16 @@ public class Hailstone extends ConsoleProgram {
 		while (n > 1) {
 			if (isEven(n)) {
 				int half = takeHalf(n);
-				println(n + "is even, so I take half = " + half);
+				println(n + " is even, so I take half = " + half);
 				n = half;
 			} else {
 				int threeNPlusOne = makeThreeNPlusOne(n);
-				println(n + "is odd, so I make 3n + 1 = " + threeNPlusOne);
+				println(n + " is odd, so I make 3n + 1 = " + threeNPlusOne);
 				n = threeNPlusOne;
 			}
 			counter ++;
 		}
-		println("The process took" + counter + "steps to reach 1.");
+		println("The process took" + counter + " steps to reach 1.");
 	}
 
 	private boolean isEven (int x) {
