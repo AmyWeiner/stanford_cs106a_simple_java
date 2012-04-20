@@ -17,13 +17,12 @@ public class Pyramid extends GraphicsProgram {
 	public void run() {
 		for (int i = 0; i < BRICKS_IN_BASE; i++){
 			for (double j = BRICKS_IN_BASE; j > 0; j--) {
-				for (double k = BRICKS_IN_BASE; k > 0; k--) {
-					double x = (getWidth() - (BRICK_WIDTH * k)) / 2 + (BRICK_WIDTH * i);
-					double y = getHeight() - (BRICK_HEIGHT * j);
-					GRect brick = new GRect (x, y, BRICK_WIDTH, BRICK_HEIGHT);
-					add(brick);
-				}
+				double x = (getWidth() - (BRICK_WIDTH * BRICKS_IN_BASE)) / 2 + (BRICK_WIDTH * i);
+				double y = getHeight() - (BRICK_HEIGHT * j);
+				GRect brick = new GRect (x, y, BRICK_WIDTH, BRICK_HEIGHT);
+				add(brick);
 			}
 		}
 	}
+
 }
