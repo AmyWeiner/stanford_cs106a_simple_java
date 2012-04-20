@@ -15,13 +15,20 @@ public class Quadratic extends ConsoleProgram {
 		double b = readDouble("b: ");
 		double c = readDouble("c: ");
 		double x1 = calculateSolutionOne(a, b, c);
-		//double x2 = calculateSolutionTwo();
+		double x2 = calculateSolutionTwo(a, b, c);
 		println("The first solution is: " + x1);
+		println("The second solution is: " + x2);
 	}
 
 	private double calculateSolutionOne(double a, double b, double c) {
 		double x = (b * b) - (4 * a * c);
 		return (-b + Math.sqrt(x)) / (2 * a);
 	}
+	
+	private double calculateSolutionTwo(double a, double b, double c) {
+		double x = (b * b) - (4 * a * c);
+		return (-b - Math.sqrt(x)) / (2 * a);
+	}
+	
 }
 
