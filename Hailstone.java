@@ -18,9 +18,11 @@ public class Hailstone extends ConsoleProgram {
 			if (isEven(n)) {
 				int half = takeHalf(n);
 				println(n + "is even, so I take half = " + half);
+				n = half;
 			} else {
 				int threeNPlusOne = makeThreeNPlusOne(n);
 				println(n + "is odd, so I make 3n + 1 = " + threeNPlusOne);
+				n = threeNPlusOne;
 			}
 			counter ++;
 		}
