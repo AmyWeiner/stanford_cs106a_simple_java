@@ -14,21 +14,24 @@ public class Quadratic extends ConsoleProgram {
 		double a = readDouble("a: ");
 		double b = readDouble("b: ");
 		double c = readDouble("c: ");
-		double x1 = calculateSolutionOne(a, b, c);
-		double x2 = calculateSolutionTwo(a, b, c);
+		double radicand = (b * b) - (4 * a * c);
+		if (radicand < 0) {
+			println("The equation has no real solutions.");
+		} else {
+		double x1 = calculateSolutionOne(b, radicand, a);
+		double x2 = calculateSolutionTwo(b, radicand, a);
 		println("The first solution is: " + x1);
 		println("The second solution is: " + x2);
+		}
 	}
 
-	private double calculateSolutionOne(double a, double b, double c) {
-		double x = (b * b) - (4 * a * c);
-		return (-b + Math.sqrt(x)) / (2 * a);
+	private double calculateSolutionOne(double x, double y, double z) {
+			return (-x + Math.sqrt(y)) / (2 * z);
+		}
+
+	private double calculateSolutionTwo(double x, double y, double z) {
+		return (-x - Math.sqrt(y)) / (2 * z);
 	}
-	
-	private double calculateSolutionTwo(double a, double b, double c) {
-		double x = (b * b) - (4 * a * c);
-		return (-b - Math.sqrt(x)) / (2 * a);
-	}
-	
+
 }
 
