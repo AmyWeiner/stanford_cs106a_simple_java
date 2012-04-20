@@ -26,7 +26,7 @@ public class Hailstone extends ConsoleProgram {
 			}
 			counter ++;
 		}
-		println("The process took" + counter + " steps to reach 1.");
+		println("The process took " + counter + " steps to reach 1.");
 	}
 
 	private boolean isEven (int x) {
