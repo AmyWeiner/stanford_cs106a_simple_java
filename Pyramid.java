@@ -15,7 +15,7 @@ public class Pyramid extends GraphicsProgram {
 	private static final double BRICKS_IN_BASE =12;
 
 	public void run() {
-		for (double i = BRICKS_IN_BASE; i > 0; i++){
+		for (int i = 0; i < BRICKS_IN_BASE; i++){
 			for (double j = BRICKS_IN_BASE; j > 0; j--) {
 				double x = (getWidth() - (BRICK_WIDTH * BRICKS_IN_BASE)) / 2 + (BRICK_WIDTH * i);
 				double y = getHeight() - (BRICK_HEIGHT * j);
