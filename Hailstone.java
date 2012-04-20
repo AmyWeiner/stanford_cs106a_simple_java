@@ -1,8 +1,12 @@
 /*
  * File: Hailstone.java
- * --------------------
- * This program is a stub for the Hailstone problem, which computes
- * Hailstone sequence described in Assignment #2.
+ * --------------------------------------------------
+ * This program displays the Hailstone sequence of an 
+ * integer, as outlined in Douglas Hofstadter's book 
+ * Godel, Escher, Bach, upon reading in an integer from 
+ * the user. Additionally, at the end of the sequence, 
+ * the program displays the number of steps taken in
+ * order to reach 1.
  */
 
 import acm.program.*;
