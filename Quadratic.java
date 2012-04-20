@@ -35,7 +35,7 @@ public class Quadratic extends ConsoleProgram {
 	 * @param x This represents the b coefficient
 	 * @param y This represents the radicand value
 	 * @param z This represents the a coefficient
-	 * @return
+	 * @return This method returns a double that represents the first solution to the quadratic equation
 	 */
 	private double calculateSolutionOne(double x, double y, double z) {
 			return (-x + Math.sqrt(y)) / (2 * z);
@@ -48,7 +48,7 @@ public class Quadratic extends ConsoleProgram {
 	 * @param x This represents the b coefficient
 	 * @param y This represents the radicand value
 	 * @param z This represents the a coefficient
-	 * @return
+	 * @return This method returns a double that represents the second solution to the quadtratic equation
 	 */
 	private double calculateSolutionTwo(double x, double y, double z) {
 		return (-x - Math.sqrt(y)) / (2 * z);
