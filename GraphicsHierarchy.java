@@ -30,13 +30,11 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		double ry2 = (getHeight() / 2) + OFFSET_FROM_CENTER;
 		double horizontalOffset = getWidth() / 4;								//horizontal distance between second tier boxes
 		addGObjectBox(rx1, ry1, w, h);
-		//String gObject = "GObject";
-		String gLabel = "GLabel";
+		addGLabelBox(rx2, ry2, w, h);
 		String gLine = "GLine";
 		String gOval = "GOval";
 		String gRect = "GRect";
-		//add(createLabeledBox(rx1, ry1, w, h, gObject));
-		add(createLabeledBox(rx2, ry2, w, h, gLabel));
+		//add(createLabeledBox(rx2, ry2, w, h, gLabel));
 		add(createLabeledBox(rx2 + horizontalOffset, ry2, w, h, gLine));
 		add(createLabeledBox(rx2 + (2 * horizontalOffset), ry2, w, h, gOval));
 		add(createLabeledBox(rx2 + (3 * horizontalOffset), ry2, w, h, gRect));
@@ -53,6 +51,11 @@ public class GraphicsHierarchy extends GraphicsProgram {
 	private void addGObjectBox(double x, double y, double w, double h) {
 		String gObject = "GObject";
 		add(createLabeledBox(x, y, w, h, gObject));
+	}
+	
+	private void addGLabelBox(double x, double y, double w, double h) {
+		String gLabel = "GLabel";
+		add(createLabeledBox(x, y, w, h, gLabel));
 	}
 	
 	/*
