@@ -16,7 +16,7 @@ public class GraphicsHierarchy extends GraphicsProgram {
 	
 	private void addDiagram() {
 		double rx = getWidth() / 2;
-		double ry = getHeight() / 2;
+		double ry = (getHeight() / 2) - OFFSET_FROM_CENTER;
 		double w = BOX_WIDTH;
 		double h = BOX_HEIGHT;
 		String gObject = "GObject";
@@ -41,5 +41,5 @@ public class GraphicsHierarchy extends GraphicsProgram {
 
 	private static final double BOX_WIDTH = 100;
 	private static final double BOX_HEIGHT = 50;
-	private static final double OFFSET_FROM_TOP = 20;
+	private static final double OFFSET_FROM_CENTER = 100;
 }
