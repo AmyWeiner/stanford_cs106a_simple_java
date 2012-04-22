@@ -6,11 +6,15 @@
  */
 
 import acm.program.*;
+import acm.graphics.*;
+import java.awt.*;
 
 public class Rainbow extends GraphicsProgram {
-
+	
 	public void run() {
-		// You fill this in
+		Canvas canvas = new Canvas();
+		canvas.setBackground(Color.CYAN);
+		//drawRainbow();
 	}
 
 }
