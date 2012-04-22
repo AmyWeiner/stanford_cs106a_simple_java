@@ -7,14 +7,25 @@
 
 import acm.program.*;
 import acm.graphics.*;
+
 import java.awt.*;
 
 public class Rainbow extends GraphicsProgram {
 
 	public void run() {
+		drawSky();
 		drawRainbow();
 	}
 
+	private void drawSky() {
+		double x = 0;
+		double y = 0;
+		double skyWidth = getWidth();
+		double skyHeight = getHeight();
+		GRect sky = new GRect(x, y, skyWidth, skyHeight);
+		sky.setColor(Color.CYAN);
+		add(sky);
+	}
 	private void drawRainbow() {
 		drawRedStripe();
 		drawOrangeStripe();
