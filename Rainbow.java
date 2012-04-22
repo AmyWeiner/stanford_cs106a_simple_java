@@ -26,6 +26,11 @@ public class Rainbow extends GraphicsProgram {
 		sky.setColor(Color.CYAN);
 		sky.setFilled(true);
 		add(sky);
+		double cx = getWidth() / 2;
+		double cy = getHeight() / 2 + 320;
+		double r1 = 440;
+		double r2 = 380;
+		add(createFilledCircle(cx, cy, r1, r2, Color.CYAN));
 	}
 	private void drawRainbow() {
 		drawRedStripe();
@@ -34,7 +39,6 @@ public class Rainbow extends GraphicsProgram {
 		drawGreenStripe();
 		drawBlueStripe();
 		drawMagentaStripe();
-		drawWhiteSpace();
 	}
 
 	private void drawRedStripe() {
@@ -83,14 +87,6 @@ public class Rainbow extends GraphicsProgram {
 		double r1 = 460;
 		double r2 = 400;
 		add(createFilledCircle(cx, cy, r1, r2, Color.MAGENTA));
-	}
-
-	private void drawWhiteSpace() {
-		double cx = getWidth() / 2;
-		double cy = getHeight() / 2 + 320;
-		double r1 = 440;
-		double r2 = 380;
-		add(createFilledCircle(cx, cy, r1, r2, Color.WHITE));
 	}
 
 	private GOval createFilledCircle(double x, double y, double r1, double r2, Color color) {
