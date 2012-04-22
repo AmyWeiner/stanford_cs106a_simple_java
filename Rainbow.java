@@ -13,7 +13,7 @@ public class Rainbow extends GraphicsProgram {
 	
 	double RAINBOW_CENTER = getWidth() / 2;
 	double OFFSET = getHeight() + 200;
-	double RADIUS = getWidth() / 2;
+	double RADIUS = 50;
 	
 	public void run() {
 		drawRainbow();
@@ -29,7 +29,7 @@ public class Rainbow extends GraphicsProgram {
 	}
 	
 	private void drawRedStripe() {
-		add(createFilledCircle(350, 400, 400, Color.RED));
+		add(createFilledCircle(RAINBOW_CENTER, OFFSET, 400, Color.RED));
 	}
 	
 	private GOval createFilledCircle(double x, double y, double r, Color color) {
