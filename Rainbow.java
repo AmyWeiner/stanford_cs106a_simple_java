@@ -40,7 +40,7 @@ public class Rainbow extends GraphicsProgram {
 	
 	private void drawYellowStripe() {
 		double cx = getWidth() / 2;
-		double cy = getHeight() / 2;
+		double cy = getHeight() / 2 + 200;
 		double r = 320;
 		add(createFilledCircle(cx, cy, r, Color.YELLOW));
 	}
