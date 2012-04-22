@@ -19,7 +19,7 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		double ry1 = (getHeight() / 2) - OFFSET_FROM_CENTER;
 		double w = BOX_WIDTH;
 		double h = BOX_HEIGHT;
-		double rx2 = getWidth() / 4;
+		double rx2 = getWidth() / 8;
 		double ry2 = (getHeight() / 2) + OFFSET_FROM_CENTER;
 		String gObject = "GObject";
 		String gLabel = "GLabel";
