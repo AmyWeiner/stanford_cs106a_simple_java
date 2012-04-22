@@ -10,7 +10,7 @@ import acm.graphics.*;
 import java.awt.*;
 
 public class Rainbow extends GraphicsProgram {
-	double cx = getWidth() / 2;
+	double RAINBOW_CENTER = getWidth() / 2;
 	double cy = getHeight() / 2;
 	public void run() {
 
@@ -27,11 +27,11 @@ public class Rainbow extends GraphicsProgram {
 	}
 
 	private void drawRedStripe() {
-		add(createFilledCircle(getWidth() / 2, getHeight() / 2, 40, Color.RED));
+		add(createFilledCircle(RAINBOW_CENTER, getHeight() / 2, 40, Color.RED));
 	}
 	
 	private void drawOrangeStripe() {
-		add(createFilledCircle(getWidth() / 2, getHeight() / 2, 20, Color.ORANGE ));
+		add(createFilledCircle(RAINBOW_CENTER, getHeight() / 2, 20, Color.ORANGE ));
 	}
 
 	private GOval createFilledCircle(double x, double y, double r, Color color) {
