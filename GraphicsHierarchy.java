@@ -16,11 +16,11 @@ public class GraphicsHierarchy extends GraphicsProgram {
 	
 	private void addDiagram() {
 		double rx1 = getWidth() / 2;
-		double ry1 = (getHeight() / 2) - TIER_ONE_OFFSET;
+		double ry1 = (getHeight() / 2) - OFFSET_FROM_CENTER;
 		double w = BOX_WIDTH;
 		double h = BOX_HEIGHT;
 		double rx2 = getWidth() / 4;
-		double ry2 = (getHeight() / 2) + TIER_ONE_OFFSET;
+		double ry2 = (getHeight() / 2) + OFFSET_FROM_CENTER;
 		String gObject = "GObject";
 		String gLabel = "GLabel";
 		add(createLabeledBox(rx1, ry1, w, h, gObject));
@@ -43,5 +43,5 @@ public class GraphicsHierarchy extends GraphicsProgram {
 
 	private static final double BOX_WIDTH = 100;
 	private static final double BOX_HEIGHT = 50;
-	private static final double TIER_ONE_OFFSET = 100;
+	private static final double OFFSET_FROM_CENTER = 100;
 }
