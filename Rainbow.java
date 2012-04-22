@@ -19,7 +19,7 @@ public class Rainbow extends GraphicsProgram {
 
 	private void drawRainbow() {
 		drawRedStripe();
-		//drawOrangeStripe();
+		drawOrangeStripe();
 		//drawYellowStripe();
 		//drawGreenStripe();
 		//drawBlueStripe();
@@ -28,6 +28,10 @@ public class Rainbow extends GraphicsProgram {
 
 	private void drawRedStripe() {
 		add(createFilledCircle(cx, cy, 20, Color.RED));
+	}
+	
+	private void drawOrangeStripe() {
+		add(createFilledCircle(getWidth() / 2, getHeight() / 2, 20, Color.ORANGE ));
 	}
 
 	private GOval createFilledCircle(double x, double y, double r, Color color) {
