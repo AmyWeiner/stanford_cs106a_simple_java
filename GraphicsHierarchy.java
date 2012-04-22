@@ -28,9 +28,9 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		}
 	
 	private GRect createLabeledBox(double x, double y, double w, double h, String str) {
-		GRect rect = new GRect(x - (x / 2), y - (y / 2), w, h);
+		GRect rect = new GRect(x - (BOX_WIDTH / 2), y - (BOX_HEIGHT / 2), w, h);
 		GLabel label = new GLabel(str, x, y);
-		label.setLocation((BOX_WIDTH - label.getWidth()) / 2, (BOX_HEIGHT - (label.getAscent() + label.getDescent())) / 2);
+		label.setLocation((x - label.getWidth()) / 2, (y - (label.getAscent() + label.getDescent())) / 2);
 		add(label);
 		return rect;
 		
