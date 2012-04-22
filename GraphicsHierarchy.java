@@ -31,7 +31,7 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		GRect rect = new GRect(x - (BOX_WIDTH / 2), y - (BOX_HEIGHT / 2), w, h);
 		GLabel label = new GLabel(str, x, y);
 		double lx = x - (label.getWidth() / 2);
-		double ly = (h + (label.getAscent() + label.getDescent())) / 2;
+		double ly = y + ((label.getAscent() + label.getDescent()) / 2);
 		label.setLocation(lx, ly);
 		add(label);
 		return rect;
