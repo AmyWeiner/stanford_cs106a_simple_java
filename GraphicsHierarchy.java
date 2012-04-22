@@ -51,12 +51,12 @@ public class GraphicsHierarchy extends GraphicsProgram {
 	
 	private void addGLabelBox(double x, double y, double w, double h, double o) {
 		String gLabel = "GLabel";
-		add(createLabeledBox(o, y, w, h, gLabel));
+		add(createLabeledBox(x, y, w, h, gLabel));
 	}
 	
 	private void addGLineBox(double x, double y, double w, double h, double o) {
 		String gLine = "GLine";
-		add(createLabeledBox(x, y, w, h, gLine));
+		add(createLabeledBox(x + o, y, w, h, gLine));
 	}
 	
 	private void addGOvalBox(double x, double y, double w, double h, double o) {
