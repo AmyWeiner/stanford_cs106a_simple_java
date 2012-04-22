@@ -37,7 +37,7 @@ public class Rainbow extends GraphicsProgram {
 		double cx = getWidth() / 2;
 		double cy = getHeight() / 2 + 320;
 		double r1 = 520;
-		double r2 = 500;
+		double r2 = 480;
 		add(createFilledCircle(cx, cy, r1, r2, Color.ORANGE ));
 	}
 
@@ -45,7 +45,7 @@ public class Rainbow extends GraphicsProgram {
 		double cx = getWidth() / 2;
 		double cy = getHeight() / 2 + 320;
 		double r1 = 500;
-		double r2 = 500;
+		double r2 = 460;
 		add(createFilledCircle(cx, cy, r1, r2, Color.YELLOW));
 	}
 
@@ -53,7 +53,7 @@ public class Rainbow extends GraphicsProgram {
 		double cx = getWidth() / 2;
 		double cy = getHeight() / 2 + 320;
 		double r1 = 480;
-		double r2 = 500;
+		double r2 = 440;
 		add(createFilledCircle(cx, cy, r1, r2, Color.GREEN));
 	}
 
@@ -61,7 +61,7 @@ public class Rainbow extends GraphicsProgram {
 		double cx = getWidth() / 2;
 		double cy = getHeight() / 2 + 320;
 		double r1 = 460;
-		double r2 = 500;
+		double r2 = 420;
 		add(createFilledCircle(cx, cy, r1, r2, Color.BLUE));
 	}
 
@@ -69,7 +69,7 @@ public class Rainbow extends GraphicsProgram {
 		double cx = getWidth() / 2;
 		double cy = getHeight() / 2 + 320;
 		double r1 = 440;
-		double r2 = 500;
+		double r2 = 400;
 		add(createFilledCircle(cx, cy, r1, r2, Color.MAGENTA));
 	}
 
@@ -77,7 +77,7 @@ public class Rainbow extends GraphicsProgram {
 		double cx = getWidth() / 2;
 		double cy = getHeight() / 2 + 320;
 		double r1 = 420;
-		double r2 = 500;
+		double r2 = 380;
 		add(createFilledCircle(cx, cy, r1, r2, Color.WHITE));
 	}
 
