@@ -36,6 +36,10 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		add(gObjectToGLabel);
 		GLine gObjectToGLine = new GLine(rx1, ry1 + (BOX_HEIGHT / 2), rx2 + horizontalOffset, ry2 - (BOX_HEIGHT / 2));
 		add(gObjectToGLine);
+		GLine gObjectToGOval = new GLine(rx1, ry1 + (BOX_HEIGHT / 2), rx2 + (2 * horizontalOffset), ry2 - (BOX_HEIGHT / 2));
+		add(gObjectToGOval);
+		GLine gObjectToGRect = new GLine(rx1, ry1 + (BOX_HEIGHT / 2), rx2 + (3 * horizontalOffset), ry2 - (BOX_HEIGHT / 2));
+		add(gObjectToGRect);
 		}
 	
 	private GRect createLabeledBox(double x, double y, double w, double h, String str) {
