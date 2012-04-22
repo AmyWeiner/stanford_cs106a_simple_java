@@ -6,18 +6,38 @@
  */
 
 import acm.program.*;
+import acm.graphics.*;
 
 public class GraphicsHierarchy extends GraphicsProgram {
 	
 	public void run() {
-		addDiagram(getWidth() / 2, getHeight() / 2);
-		double x = (getWidth() - BOX_WIDTH) / 2;
-		double y = (getHeight() - BOX_HEIGHT) / 2;
-		drawBox(x, y, BOX_WIDTH, BOX_HEIGHT);
+		addDiagram();
 	}
 	
-	private void addDiagram
+	private void addDiagram() {
+		double rx = getWidth() / 2;
+		double ry = OFFSET_FROM_TOP;
+		double w = BOX_WIDTH;
+		double h = BOX_HEIGHT;
+		String gObject = "GObject";
+		add(createLabeledBox(rx, ry, w, h, gObject));
+		//drawGLabelBox();
+		//drawGLineBox();
+		//drawGOvalBox();
+		//drawGRectBox();
+		}
+	
+	private GRect createLabeledBox(double x, double y, double w, double h, String str) {
+		GRect rect = new GRect(x - (BOX_WIDTH / 2), y - (BOX_HEIGHT / 2), w, h);
+		GLabel label = new GLabel(str, x, y);
+		label.setLocation((BOX_WIDTH - label.getWidth()) / 2, (BOX_HEIGHT - (label.getAscent() + label.getDescent())) / 2);
+		add(label);
+		return rect;
+		
+	}
+	
 
 	private static final double BOX_WIDTH = 100;
 	private static final double BOX_HEIGHT = 50;
+	private static final double OFFSET_FROM_TOP = 20;
 }
