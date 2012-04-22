@@ -41,5 +41,5 @@ public class GraphicsHierarchy extends GraphicsProgram {
 
 	private static final double BOX_WIDTH = 100;
 	private static final double BOX_HEIGHT = 50;
-	private static final double OFFSET_FROM_CENTER = 100;
+	private static final double OFFSET_FROM_CENTER = 200;
 }
