@@ -21,14 +21,17 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		double h = BOX_HEIGHT;
 		double rx2 = getWidth() / 8;
 		double ry2 = (getHeight() / 2) + OFFSET_FROM_CENTER;
+		double horizontalOffset = getWidth() / 4;
 		String gObject = "GObject";
 		String gLabel = "GLabel";
 		String gLine = "GLine";
+		String gOval = "GOval";
+		String gRect = "GRect";
 		add(createLabeledBox(rx1, ry1, w, h, gObject));
 		add(createLabeledBox(rx2, ry2, w, h, gLabel));
-		add(createLabeledBox(rx2 + (getWidth() / 4), ry2, w, h, gLine));
-		//drawGOvalBox();
-		//drawGRectBox();
+		add(createLabeledBox(rx2 + horizontalOffset, ry2, w, h, gLine));
+		add(createLabeledBox(rx2 + (2 * horizontalOffset), ry2, w, h, gOval));
+		add(createLabeledBox(rx2 + (3 * horizontalOffset), ry2, w, h, gRect));
 		}
 	
 	private GRect createLabeledBox(double x, double y, double w, double h, String str) {
