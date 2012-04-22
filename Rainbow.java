@@ -69,7 +69,7 @@ public class Rainbow extends GraphicsProgram {
 
 	private void drawWhiteSpace() {
 		double cx = getWidth() / 2;
-		double cy = getHeight() / 2 + 300;
+		double cy = getHeight() / 2 + 320;
 		double r = 420;
 		add(createFilledCircle(cx, cy, r, Color.WHITE));
 	}
