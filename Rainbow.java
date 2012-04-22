@@ -24,6 +24,7 @@ public class Rainbow extends GraphicsProgram {
 		double skyHeight = getHeight();
 		GRect sky = new GRect(x, y, skyWidth, skyHeight);
 		sky.setColor(Color.CYAN);
+		sky.setFilled(true);
 		add(sky);
 	}
 	private void drawRainbow() {
