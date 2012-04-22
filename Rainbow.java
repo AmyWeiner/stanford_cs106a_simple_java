@@ -12,7 +12,6 @@ import java.awt.*;
 public class Rainbow extends GraphicsProgram {
 	
 	public void run() {
-
 		drawRainbow();
 	}
 
@@ -27,15 +26,16 @@ public class Rainbow extends GraphicsProgram {
 
 	private void drawRedStripe() {
 		double cx = getWidth() / 2;
-		double cy = getHeight() / 2 + 100;
+		double cy = getHeight() / 2 + 200;
 		double r = 300;
 		add(createFilledCircle(cx, cy, r, Color.RED));
 	}
 	
 	private void drawOrangeStripe() {
 		double cx = getWidth() / 2;
-		double cy = getHeight() / 2 + 100;
-		add(createFilledCircle(cx, cy, 280, Color.ORANGE ));
+		double cy = getHeight() / 2 + 200;
+		double r = 280;
+		add(createFilledCircle(cx, cy, r, Color.ORANGE ));
 	}
 	
 	private void drawYellowStripe() {
