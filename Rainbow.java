@@ -12,7 +12,7 @@ import java.awt.*;
 public class Rainbow extends GraphicsProgram {
 	
 	double RAINBOW_CENTER = getWidth() / 2;
-	double OFFSET = getHeight() + 50;
+	double OFFSET = getHeight() + 100;
 	double RADIUS = getWidth() / 2;
 	
 	public void run() {
@@ -29,7 +29,7 @@ public class Rainbow extends GraphicsProgram {
 	}
 	
 	private void drawRedStripe() {
-		add(createFilledCircle(RAINBOW_CENTER, RAINBOW_CENTER, RADIUS, Color.RED));
+		add(createFilledCircle(RAINBOW_CENTER, getHeight() / 2, RADIUS, Color.RED));
 	}
 	
 	private GOval createFilledCircle(double x, double y, double r, Color color) {
