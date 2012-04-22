@@ -23,9 +23,10 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		double ry2 = (getHeight() / 2) + OFFSET_FROM_CENTER;
 		String gObject = "GObject";
 		String gLabel = "GLabel";
+		String gLine = "GLine";
 		add(createLabeledBox(rx1, ry1, w, h, gObject));
 		add(createLabeledBox(rx2, ry2, w, h, gLabel));
-		//drawGLineBox();
+		add(createLabeledBox(rx2 + (getWidth() / 4), ry2, w, h, gLine));
 		//drawGOvalBox();
 		//drawGRectBox();
 		}
