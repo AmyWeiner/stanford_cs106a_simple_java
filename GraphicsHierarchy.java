@@ -56,7 +56,7 @@ public class GraphicsHierarchy extends GraphicsProgram {
 	
 	private void addGLineBox(double x, double y, double w, double h, double o) {
 		String gLine = "GLine";
-		add(createLabeledBox(o, y, w, h, gLine));
+		add(createLabeledBox(x, y, w, h, gLine));
 	}
 	
 	private void addGOvalBox(double x, double y, double w, double h, double o) {
