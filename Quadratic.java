@@ -21,38 +21,29 @@ public class Quadratic extends ConsoleProgram {
 		if (radicand < 0) {												//determines whether or not radicand is negative
 			println("The equation has no real solutions.");				//informs user equation has no real solutions
 		} else {
-		double x1 = calculateSolutionOne(b, radicand, a);				//calculates the first solution
-		double x2 = calculateSolutionTwo(b, radicand, a);				//calculates the second solution
-		println("The first solution is: " + x1);
-		println("The second solution is: " + x2);
+			double x1 = calculateSolutionOne(b, radicand, a);				//calculates the first solution
+			double x2 = calculateSolutionTwo(b, radicand, a);				//calculates the second solution
+			println("The first solution is: " + x1);
+			println("The second solution is: " + x2);
 		}
 	}
 
-	/**
-	 * This method calculates the first solution to the quadratic equation, which is a result
+	/*
+	 * The method calculateSolutionOne calculates the first solution to the quadratic equation, which is a result
 	 * of adding the evaluated square root term to the opposite of term b, and then dividing by 
 	 * the term a multiplied by 2.
-	 * @param x This represents the b coefficient
-	 * @param y This represents the radicand value
-	 * @param z This represents the a coefficient
-	 * @return This method returns a double that represents the first solution to the quadratic equation
 	 */
 	private double calculateSolutionOne(double x, double y, double z) {
-			return (-x + Math.sqrt(y)) / (2 * z);
-		}
+		return (-x + Math.sqrt(y)) / (2 * z);
+	}
 
-	/**
-	 * This method calculates the second solution to the quadratic equation, which is a result
+	/*
+	 * The method calculateSolutionTwo calculates the second solution to the quadratic equation, which is a result
 	 * of subtracting the evaluated square root term from the opposite of term b, and then dividing by 
 	 * the term a multiplied by 2.
-	 * @param x This represents the b coefficient
-	 * @param y This represents the radicand value
-	 * @param z This represents the a coefficient
-	 * @return This method returns a double that represents the second solution to the quadtratic equation
 	 */
 	private double calculateSolutionTwo(double x, double y, double z) {
 		return (-x - Math.sqrt(y)) / (2 * z);
 	}
-
 }
 

@@ -33,29 +33,24 @@ public class Hailstone extends ConsoleProgram {
 		println("The process took " + counter + " steps to reach 1.");
 	}
 
-	/**
-	 * This method determines whether or not an integer is even by testing whether or not the
+	/*
+	 * The method isEven determines whether or not an integer is even by testing whether or not the
 	 * remainder is equal to zero when the integer is divided by two.
-	 * @param x This represents the integer
-	 * @return This method returns a boolean, which is true if the integer is even, and false otherwise.
 	 */
 	private boolean isEven (int x) {
 		return x % 2 == 0;
 	}
 
-	/**
-	 * This method takes in an integer and divides it by two.
-	 * @param x This represents the integer to be divided in half
-	 * @return This method returns an integer that is half of the original integer
+	/*
+	 * The method takeHalf divides the value of an integer by two.
 	 */
 	private int takeHalf (int x) {
 		return x / 2;
 	}
 
-	/**
-	 * This method takes in an integer and multiplies it by three, and then adds one to it.
-	 * @param x This represents the integer to be evaluated
-	 * @return This method returns an integer that is three times plus one more than the original value
+	/*
+	 * The method makeThreeNPlusOne multiplies the value of an integer by 
+	 * three, and then adds one to it.
 	 */
 	private int makeThreeNPlusOne(int x) {
 		return (3 * x) + 1;
