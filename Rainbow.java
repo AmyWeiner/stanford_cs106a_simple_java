@@ -11,10 +11,31 @@ import java.awt.*;
 
 public class Rainbow extends GraphicsProgram {
 	
+	double RAINBOW_CENTER = getWidth() / 2;
+	double OFFSET = getHeight() + 50;
+	double RADIUS = (getWidth() / 2) + 20;
+	
 	public void run() {
-		Canvas canvas = new Canvas();
-		canvas.setBackground(Color.CYAN);
-		//drawRainbow();
+		drawRainbow();
 	}
 
+	private void drawRainbow() {
+		drawRedStripe();
+		//drawOrangeStripe();
+		//drawYellowStripe();
+		//drawGreenStripe();
+		//drawBlueStripe();
+		//drawMagentaStripe();
+	}
+	
+	private void drawRedStripe() {
+		createFilledCircle(RAINBOW_CENTER, OFFSET, RADIUS, Color.RED);
+	}
+	
+	private GOval createFilledCircle(double x, double y, double r, Color color) {
+		GOval circle = new GOval(x -r, y-r, 2 * r, 2 * r);
+		circle.setColor(color);
+		circle.setFilled(true);
+		return circle;
+	}
 }
