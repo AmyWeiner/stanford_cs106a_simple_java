@@ -29,7 +29,7 @@ public class Rainbow extends GraphicsProgram {
 	}
 	
 	private void drawRedStripe() {
-		add(createFilledCircle(RAINBOW_CENTER, 100, 50, Color.RED));
+		add(createFilledCircle(200, 100, 50, Color.RED));
 	}
 	
 	private GOval createFilledCircle(double x, double y, double r, Color color) {
