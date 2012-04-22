@@ -1,8 +1,10 @@
 /*
  * File: GraphicsHierarchy.java
- * ----------------------------
- * This program is a stub for the GraphicsHierarchy problem, which
- * draws a partial diagram of the acm.graphics hierarchy.
+ * -------------------------------------------------------------------
+ * This program draws a partial diagram of the acm.graphics hierarchy, 
+ * with the first tier of the hierarchy consisting of the GObject class, 
+ * and the second tier of the hierarchy consisting of the GLabel, GRect,
+ * GOval, and GLine subclasses.
  */
 
 import acm.program.*;
@@ -14,14 +16,19 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		addDiagram();
 	}
 	
+	/*
+	 * The method addDiagram adds a partial diagram of the acm.graphics hierarchy to the screen. 
+	 * The first tier of the hierarchy consisting of the GObject class, and the second tier of 
+	 * the hierarchy consisting of the GLabel, GRect, GOval, and GLine subclasses.
+	 */
 	private void addDiagram() {
-		double rx1 = getWidth() / 2;
+		double rx1 = getWidth() / 2;											
 		double ry1 = (getHeight() / 2) - OFFSET_FROM_CENTER;
 		double w = BOX_WIDTH;
 		double h = BOX_HEIGHT;
 		double rx2 = getWidth() / 8;
 		double ry2 = (getHeight() / 2) + OFFSET_FROM_CENTER;
-		double horizontalOffset = getWidth() / 4;
+		double horizontalOffset = getWidth() / 4;								//horizontal distance between second tier boxes
 		String gObject = "GObject";
 		String gLabel = "GLabel";
 		String gLine = "GLine";
@@ -42,6 +49,10 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		add(gObjectToGRect);
 		}
 	
+	/*
+	 * The method createLabeledBox creates a rectangular GRect object, centered at (x, y), and
+	 * containing a label, centered at (x, y) as well.
+	 */
 	private GRect createLabeledBox(double x, double y, double w, double h, String str) {
 		GRect rect = new GRect(x - (BOX_WIDTH / 2), y - (BOX_HEIGHT / 2), w, h);
 		GLabel label = new GLabel(str, x, y);
@@ -52,6 +63,7 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		return rect;
 	}
 	
+	/* Specified constants for the program*/
 	private static final double BOX_WIDTH = 100;
 	private static final double BOX_HEIGHT = 50;
 	private static final double OFFSET_FROM_CENTER = 100;
