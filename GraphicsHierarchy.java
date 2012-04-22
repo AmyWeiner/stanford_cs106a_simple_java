@@ -28,35 +28,48 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		double h = BOX_HEIGHT;
 		double rx2 = getWidth() / 8;
 		double ry2 = (getHeight() / 2) + OFFSET_FROM_CENTER;
-		double horizontalOffset = getWidth() / 4;								//horizontal distance between second tier boxes
-		addGObjectBox(rx1, ry1, w, h);
-		addGLabelBox(rx2, ry2, w, h);
-		String gLine = "GLine";
-		String gOval = "GOval";
-		String gRect = "GRect";
-		//add(createLabeledBox(rx2, ry2, w, h, gLabel));
-		add(createLabeledBox(rx2 + horizontalOffset, ry2, w, h, gLine));
-		add(createLabeledBox(rx2 + (2 * horizontalOffset), ry2, w, h, gOval));
-		add(createLabeledBox(rx2 + (3 * horizontalOffset), ry2, w, h, gRect));
+		double o = getWidth() / 4;								//horizontal distance between second tier boxes
+		addGObjectBox(rx1, ry1, w, h, o);
+		addGLabelBox(rx2, ry2, w, h, o);
+		addGLineBox(rx2, ry2, w, h, o);
+		addGOvalBox(rx2, ry2, w, h, o);
+		addGRectBox(rx2, ry2, w, h, o);
 		GLine gObjectToGLabel = new GLine(rx1, ry1 + (BOX_HEIGHT / 2), rx2, ry2 - (BOX_HEIGHT / 2));
 		add(gObjectToGLabel);
-		GLine gObjectToGLine = new GLine(rx1, ry1 + (BOX_HEIGHT / 2), rx2 + horizontalOffset, ry2 - (BOX_HEIGHT / 2));
+		GLine gObjectToGLine = new GLine(rx1, ry1 + (BOX_HEIGHT / 2), rx2 + o, ry2 - (BOX_HEIGHT / 2));
 		add(gObjectToGLine);
-		GLine gObjectToGOval = new GLine(rx1, ry1 + (BOX_HEIGHT / 2), rx2 + (2 * horizontalOffset), ry2 - (BOX_HEIGHT / 2));
+		GLine gObjectToGOval = new GLine(rx1, ry1 + (BOX_HEIGHT / 2), rx2 + (2 * o), ry2 - (BOX_HEIGHT / 2));
 		add(gObjectToGOval);
-		GLine gObjectToGRect = new GLine(rx1, ry1 + (BOX_HEIGHT / 2), rx2 + (3 * horizontalOffset), ry2 - (BOX_HEIGHT / 2));
+		GLine gObjectToGRect = new GLine(rx1, ry1 + (BOX_HEIGHT / 2), rx2 + (3 * o), ry2 - (BOX_HEIGHT / 2));
 		add(gObjectToGRect);
 		}
 	
-	private void addGObjectBox(double x, double y, double w, double h) {
+	private void addGObjectBox(double x, double y, double w, double h, double o) {
 		String gObject = "GObject";
 		add(createLabeledBox(x, y, w, h, gObject));
 	}
 	
-	private void addGLabelBox(double x, double y, double w, double h) {
+	private void addGLabelBox(double x, double y, double w, double h, double o) {
 		String gLabel = "GLabel";
-		add(createLabeledBox(x, y, w, h, gLabel));
+		add(createLabeledBox(o, y, w, h, gLabel));
 	}
+	
+	private void addGLineBox(double x, double y, double w, double h, double o) {
+		String gLine = "GLine";
+		add(createLabeledBox(x, y, w, h, gLine));
+	}
+	
+	private void addGOvalBox(double x, double y, double w, double h, double o) {
+		String gOval = "GOval";
+		add(createLabeledBox(2 * o, y, w, h, gOval));
+	}
+	
+	private void addGRectBox(double x, double y, double w, double h, double o) {
+		String gRect = "GRect";
+		add(createLabeledBox(3 * o, y, w, h, gRect));
+	}
+	
+	
 	
 	/*
 	 * The method createLabeledBox creates a rectangular GRect object, centered at (x, y), and
