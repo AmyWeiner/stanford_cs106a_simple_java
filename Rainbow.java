@@ -28,54 +28,61 @@ public class Rainbow extends GraphicsProgram {
 	private void drawRedStripe() {
 		double cx = getWidth() / 2;
 		double cy = getHeight() / 2 + 320;
-		double r = 540;
-		add(createFilledCircle(cx, cy, r, Color.RED));
+		double r1 = 540;
+		double r2 = 500;
+		add(createFilledCircle(cx, cy, r1, r2, Color.RED));
 	}
 
 	private void drawOrangeStripe() {
 		double cx = getWidth() / 2;
 		double cy = getHeight() / 2 + 320;
-		double r = 520;
-		add(createFilledCircle(cx, cy, r, Color.ORANGE ));
+		double r1 = 520;
+		double r2 = 500;
+		add(createFilledCircle(cx, cy, r1, r2, Color.ORANGE ));
 	}
 
 	private void drawYellowStripe() {
 		double cx = getWidth() / 2;
 		double cy = getHeight() / 2 + 320;
-		double r = 500;
-		add(createFilledCircle(cx, cy, r, Color.YELLOW));
+		double r1 = 500;
+		double r2 = 500;
+		add(createFilledCircle(cx, cy, r1, r2, Color.YELLOW));
 	}
 
 	private void drawGreenStripe() {
 		double cx = getWidth() / 2;
 		double cy = getHeight() / 2 + 320;
-		double r = 480;
-		add(createFilledCircle(cx, cy, r, Color.GREEN));
+		double r1 = 480;
+		double r2 = 500;
+		add(createFilledCircle(cx, cy, r1, r2, Color.GREEN));
 	}
 
 	private void drawBlueStripe() {
 		double cx = getWidth() / 2;
 		double cy = getHeight() / 2 + 320;
-		double r = 460;
-		add(createFilledCircle(cx, cy, r, Color.BLUE));
+		double r1 = 460;
+		double r2 = 500;
+		add(createFilledCircle(cx, cy, r1, r2, Color.BLUE));
 	}
 
 	private void drawMagentaStripe() {
 		double cx = getWidth() / 2;
 		double cy = getHeight() / 2 + 320;
-		double r = 440;
-		add(createFilledCircle(cx, cy, r, Color.MAGENTA));
+		double r1 = 440;
+		double r2 = 500;
+		add(createFilledCircle(cx, cy, r1, r2, Color.MAGENTA));
 	}
 
 	private void drawWhiteSpace() {
 		double cx = getWidth() / 2;
 		double cy = getHeight() / 2 + 320;
-		double r = 420;
-		add(createFilledCircle(cx, cy, r, Color.WHITE));
+		double r1 = 420;
+		double r2 = 500;
+		add(createFilledCircle(cx, cy, r1, r2, Color.WHITE));
 	}
 
-	private GOval createFilledCircle(double x, double y, double r, Color color) {
-		GOval circle = new GOval(x - r, y - r, 2 * r, 2 * r);
+	private GOval createFilledCircle(double x, double y, double r1, double r2, Color color) {
+		GOval circle = new GOval(x - r1, y - r2, 2 * r1, 2 * r2);
 		circle.setFilled(true);
 		circle.setColor(color);
 		return circle;
