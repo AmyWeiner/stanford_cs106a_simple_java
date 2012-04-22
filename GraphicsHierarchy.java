@@ -11,11 +11,11 @@ import acm.program.*;
 import acm.graphics.*;
 
 public class GraphicsHierarchy extends GraphicsProgram {
-	
+
 	public void run() {
 		addDiagram();
 	}
-	
+
 	/*
 	 * The method addDiagram adds a partial diagram of the acm.graphics hierarchy to the screen. 
 	 * The first tier of the hierarchy consisting of the GObject class, and the second tier of 
@@ -42,35 +42,48 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		add(gObjectToGOval);
 		GLine gObjectToGRect = new GLine(rx1, ry1 + (BOX_HEIGHT / 2), rx2 + (3 * o), ry2 - (BOX_HEIGHT / 2));
 		add(gObjectToGRect);
-		}
-	
+	}
+
+	/*
+	 * The method addGObjectBox adds the GObject box of the diagram to the screen.
+	 */
 	private void addGObjectBox(double x, double y, double w, double h, double o) {
 		String gObject = "GObject";
 		add(createLabeledBox(x, y, w, h, gObject));
 	}
-	
+
+	/*
+	 * The method addGLabelBox adds the GLabel box of the diagram to the screen.
+	 */
 	private void addGLabelBox(double x, double y, double w, double h, double o) {
 		String gLabel = "GLabel";
 		add(createLabeledBox(x, y, w, h, gLabel));
 	}
-	
+
+	/*
+	 * The method addGLineBox adds the GLine box of the diagram to the screen.
+	 */
 	private void addGLineBox(double x, double y, double w, double h, double o) {
 		String gLine = "GLine";
 		add(createLabeledBox(x + o, y, w, h, gLine));
 	}
-	
+
+	/*
+	 * The method addGOvalBox adds the GOval box of the diagram to the screen.
+	 */
 	private void addGOvalBox(double x, double y, double w, double h, double o) {
 		String gOval = "GOval";
 		add(createLabeledBox(x + 2 * o, y, w, h, gOval));
 	}
-	
+
+	/*
+	 * The method addGRectBox adds the GRect box of the diagram to the screen.
+	 */
 	private void addGRectBox(double x, double y, double w, double h, double o) {
 		String gRect = "GRect";
 		add(createLabeledBox(x + 3 * o, y, w, h, gRect));
 	}
-	
-	
-	
+
 	/*
 	 * The method createLabeledBox creates a rectangular GRect object, centered at (x, y), and
 	 * containing a label, centered at (x, y) as well.
@@ -84,7 +97,7 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		add(label);
 		return rect;
 	}
-	
+
 	/* Specified constants for the program*/
 	private static final double BOX_WIDTH = 100;
 	private static final double BOX_HEIGHT = 50;
