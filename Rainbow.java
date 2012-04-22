@@ -27,7 +27,9 @@ public class Rainbow extends GraphicsProgram {
 	}
 
 	private void drawRedStripe() {
-		add(createFilledCircle(getWidth() / 2, getHeight() / 2, 40, Color.RED));
+		double cx = getWidth() / 2;
+		double cy = getHeight() / 2;
+		add(createFilledCircle(cx, cy, 40, Color.RED));
 	}
 	
 	private void drawOrangeStripe() {
