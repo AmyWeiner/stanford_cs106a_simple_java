@@ -32,6 +32,9 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		add(createLabeledBox(rx2 + horizontalOffset, ry2, w, h, gLine));
 		add(createLabeledBox(rx2 + (2 * horizontalOffset), ry2, w, h, gOval));
 		add(createLabeledBox(rx2 + (3 * horizontalOffset), ry2, w, h, gRect));
+		GLine gObjectToGLabel = new GLine(rx1, ry1 + (BOX_HEIGHT / 2), rx2, ry2 - (BOX_HEIGHT / 2));
+		add(gObjectToGLabel);
+		
 		}
 	
 	private GRect createLabeledBox(double x, double y, double w, double h, String str) {
@@ -44,7 +47,6 @@ public class GraphicsHierarchy extends GraphicsProgram {
 		return rect;
 	}
 	
-
 	private static final double BOX_WIDTH = 100;
 	private static final double BOX_HEIGHT = 50;
 	private static final double OFFSET_FROM_CENTER = 100;
