@@ -22,18 +22,16 @@ public class FindRange extends ConsoleProgram {
 				y = x;
 				println("The smallest value is " + x);
 				println("The largest value is " + y);
-			}
+			}else {
+				int min = Math.min(x, y);
+				int max = Math.max(x, y);
+			}	
 		}
-		//int min = Math.min(x,y);
-		//int max = Math.max(x, y);
-		//println("The smallest value is " + min);
-		//println("The largest value is " + max);
-	//}
-	while (true) {
+		while (true) {
 
+		}
 	}
-}
 
-private static final int SENTINEL = 0;
+	private static final int SENTINEL = 0;
 
 }
