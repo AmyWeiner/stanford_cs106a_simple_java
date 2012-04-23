@@ -26,7 +26,7 @@ public class FindRange extends ConsoleProgram {
 				int min = Math.min(x, y);
 				int max = Math.max(x, y);
 				while (true) {
-					int n = readInt("?");
+					int n = readInt("? ");
 					if (n == SENTINEL) break;
 					min = Math.min(n, min);
 					max = Math.max(n, max);
