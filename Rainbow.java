@@ -117,6 +117,7 @@ public class Rainbow extends GraphicsProgram {
 		return circle;
 	}
 	
+	/* The constants speficied for the program */
 	private static final double OFFSET_FROM_CENTER = 380;
 	private static final double BAND_WIDTH = 20;
 }
