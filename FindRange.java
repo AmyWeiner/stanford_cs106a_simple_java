@@ -25,13 +25,20 @@ public class FindRange extends ConsoleProgram {
 			}else {
 				int min = Math.min(x, y);
 				int max = Math.max(x, y);
+				while (true) {
+					int n = readInt("?");
+					if (n == SENTINEL) break;
+					min = Math.min(n, min);
+					max = Math.max(n, max);
+				}
+				
+				println("The smallest value is " + min);
+				println("The largest value is " + max);
 			}	
-		}
-		while (true) {
-
 		}
 	}
 
 	private static final int SENTINEL = 0;
 
 }
+

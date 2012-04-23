@@ -1,19 +1,15 @@
 /*
  * File: Pyramid.java
- * ------------------
- * This program is a stub for the Pyramid problem, which draws
- * a brick pyramid.
+ * -----------------------------------------------------------
+ * This program draws a brick  pyramid, consisting of bricks 
+ * arranged in horizontal rows, so that the number of bricks 
+ * in each row decreases by one as you move up the pyramid,.
  */
 
 import acm.program.*;
 import acm.graphics.*;
 
 public class Pyramid extends GraphicsProgram {
-
-	private static final double BRICK_WIDTH = 30;
-	private static final double BRICK_HEIGHT = 12;
-	private static final int BRICKS_IN_BASE =12;
-
 	public void run() {
 		for (int i = 0; i < BRICKS_IN_BASE; i++){
 			for (int j = 0; j < BRICKS_IN_BASE - i; j++) {
@@ -24,6 +20,11 @@ public class Pyramid extends GraphicsProgram {
 			}
 		}
 	}
+	
+	/* The constants given as parameters for the program */
+	private static final double BRICK_WIDTH = 30;
+	private static final double BRICK_HEIGHT = 12;
+	private static final int BRICKS_IN_BASE =12;
 
 }
 
