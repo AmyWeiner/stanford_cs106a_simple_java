@@ -13,8 +13,11 @@ public class FindRange extends ConsoleProgram {
 		println("This program finds the smallest and largest integers in a list.");
 		println("Enter values, one per line, using a 0 to signal the end of the list.");
 		int x = readInt("? ");
+		if (x == SENTINEL) {
+		println("The Sentinel number was enetered on the first input line. Therefore, no values have been entered.");
+		}
 		int y = readInt("? ");
-		if (y == 0) {
+		if (y == SENTINEL) {
 			y = x;
 		}else {
 		int min = Math.min(x,y);
