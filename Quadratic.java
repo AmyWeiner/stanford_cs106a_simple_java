@@ -27,7 +27,8 @@ public class Quadratic extends ConsoleProgram {
 			println("The second solution is: " + x2);
 		}
 	}
-
+	
+	
 	/*
 	 * The method calculateSolutionOne calculates the first solution to the quadratic equation, which is a result
 	 * of adding the evaluated square root term to the opposite of term b, and then dividing by 
